@@ -4,7 +4,7 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <form action="" method="POST">
+        <form action="/exchange" method="POST">
         <p>Waluta:</p>
         <label for="currency">dolar amerykański</label>
         <input type="radio" id="currency" name="currency" value="currency"><br>
@@ -46,10 +46,9 @@
         <input type="radio" id="currency" name="currency" value="currency"><br>
 
         <label for="amount">Ilość</label>
-        <input type="text" id="amount" name="amount" value="amount"><br>
+        <input type="text" id="amount" name="amount" value=""><br>
 
-        <label for="result">Wynik</label>
-        <textarea cols=20 rows=2 type="textbox" id="result" name="result" placeholder="Wynik"></textarea><br>
+        <input type="submit" value="Przelicz">
         </form>
     </body>
 </html>
