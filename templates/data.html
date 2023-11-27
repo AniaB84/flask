@@ -7,18 +7,18 @@
     </head>
     <body>
         <h1><strong>KANTOR</strong></h1>
-        <img src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_1280.jpg" alt="Zdjęcie monet" title="Monety">
+        <img src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_1280.jpg" alt="Zdjęcie monet" title="Monety" width="1400" height="400">
         <form action="/exchange" method="get">
             <div>
-                <label for="cur">WALUTA:</label>
+                <label for="cur"><strong>WALUTA</strong></label>
             </div>
             <div>
-                <select name="codes">
-                <ul>
-                    {% for code in codes %}
-                    {{code}}
-                    {% endfor %}
-                </ul>
+                <select name="currency">
+                    <ul>
+                       {% for code in codes %}
+                       {{code}}
+                       {% endfor %}
+                    </ul>
                     <option value="USD" selected>USD</option>
                     <option value="AUD" selected>AUD</option>
                     <option value="CAD" selected>CAD</option>
@@ -44,7 +44,7 @@
             </div>
             <div>
                 <label for="result"><strong>WYNIK</strong></label>
-                <input class="result" type="text" id="result" name="result" value="{{result}}"/>
+                <input class="result" type="text" id="result" name="result" value=""/>
             </div>
         </form>
         
