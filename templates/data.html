@@ -10,28 +10,15 @@
         <img src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_1280.jpg" alt="Zdjęcie monet" title="Monety" width="1400" height="400">
         <form action="/exchange" method="post">
             <div>
-                <label for="cur"><strong>WALUTA</strong></label>
+                <label for="code"><strong>WALUTA</strong></label>
             </div>
             <div>
-                <select name="currency">
+                <select name="code" id="code">
                     <ul>
-                       {% for code in codes %}
-                       {{code}}
+                       {% for code in rates %}
+                       <option value="code">{{code}}/option>
                        {% endfor %}
                     </ul>
-                    <option value="USD" selected>USD</option>
-                    <option value="AUD" selected>AUD</option>
-                    <option value="CAD" selected>CAD</option>
-                    <option value="EUR" selected>EUR</option>
-                    <option value="HUF" selected>HUF</option>
-                    <option value="CHF" selected>CHF</option>
-                    <option value="GBP" selected>GBP</option>
-                    <option value="JPY" selected>JPY</option>
-                    <option value="CZK" selected>CZK</option>
-                    <option value="DKK" selected>DKK</option>
-                    <option value="NOK" selected>NOK</option>
-                    <option value="SEK" selected>SEK</option>
-                    <option value="XDR" selected>XDR</option>
                     
                 </select>
             </div>
@@ -44,7 +31,7 @@
             </div>
             <div>
                 <label for="result"><strong>WYNIK</strong></label>
-                <input class="result" type="text" id="result" name="result" value=""/>
+                <textarea cols="5" rows="1" class="result" type="text" id="result" name="result" value="{{result}}"></textarea>
             </div>
         </form>
         
