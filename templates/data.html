@@ -10,16 +10,14 @@
         <img src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_1280.jpg" alt="Zdjęcie monet" title="Monety" width="1400" height="400">
         <form action="/exchange" method="post">
             <div>
-                <label for="code"><strong>WALUTA</strong></label>
+                <label for="currency"><strong>WALUTA</strong></label>
             </div>
             <div>
-                <select name="code" id="code">
-                    <ul>
-                       {% for code in rates %}
-                       <option value="code">{{code}}/option>
-                       {% endfor %}
-                    </ul>
-                    
+                <select>
+                    {% for rate in rates %}
+                    <option value="{{rate.code}}" selected>
+                    {{rate.code}}</option>
+                    {% endfor %}
                 </select>
             </div>
             <div>

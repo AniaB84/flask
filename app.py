@@ -5,6 +5,7 @@ import requests
 
 
 
+
 app = Flask(__name__)
 
 codes = ["USD", "AUD","CAD", "EUR", "HUF", "CHF", "GBP", "JPY", "CZK", "DKK", "NOK", "SEK", "XDR"]  
