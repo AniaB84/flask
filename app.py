@@ -30,7 +30,7 @@ def save_rates():
         writer = csv.DictWriter(csvfile, fieldnames=header)
         writer.writeheader()
         writer.writerows(rates)
-
+        
     return "Zapisano poprawnie"   
 
 @app.route('/exchange', methods=["GET", "POST"])

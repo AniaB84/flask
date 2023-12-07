@@ -5,17 +5,15 @@
         <title>Kantor internetowy</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body style= background-color:rgba(165,42,42,0.39);>
         <h1><strong>KANTOR</strong></h1>
         <img src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_1280.jpg" alt="Zdjęcie monet" title="Monety" width="1400" height="400">
-        <form action="/exchange" method="post">
+        <form method="post">
             <div>
                 <label for="currency"><strong>WALUTA</strong></label>
-            </div>
-            <div>
-                <select>
+                <select name="currency" id="currency">
                     {% for rate in rates %}
-                    <option value="{{rate.code}}" selected>
+                    <option value="{{rate.code}}">
                     {{rate.code}}</option>
                     {% endfor %}
                 </select>
@@ -27,11 +25,9 @@
             <div>
                 <button class="button" type="submit">Przelicz</button>
             </div>
-            <div>
-                <label for="result"><strong>WYNIK</strong></label>
-                <textarea cols="5" rows="1" class="result" type="text" id="result" name="result" value="{{result}}"></textarea>
-            </div>
         </form>
-        
+        {% if result %}
+        <p>Wynik: {{ result }}</p>  
+        {% endif %} 
     </body>
 </html>
